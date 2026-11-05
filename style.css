@@ -1,0 +1,141 @@
+/* ---------- Basic page styles ---------- */
+:root {
+  --ink: #172033;
+  --cream: #f7f4ec;
+  --purple: #7457e8;
+  --green: #89d48b;
+  --yellow: #ffd76a;
+  --blue: #73c8e8;
+  --white: #ffffff;
+  --border: #d8d5cc;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+
+.top-bar { min-height: 74px; padding: 0 6%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
+.logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: bold; }
+.logo-icon { width: 34px; height: 34px; display: grid; place-items: center; background: var(--purple); color: white; border-radius: 10px; }
+nav { display: flex; gap: 28px; font-size: 14px; font-weight: bold; }
+nav a:hover { color: var(--purple); }
+.menu-button { display: none; padding: 8px 12px; background: transparent; border: 1px solid var(--ink); border-radius: 6px; }
+
+/* ---------- Hero section ---------- */
+.hero { min-height: 620px; padding: 80px 8%; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 8%; align-items: center; overflow: hidden; }
+.small-title { margin: 0 0 12px; text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: bold; color: var(--purple); }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin-bottom: 24px; font-size: clamp(55px, 8vw, 104px); line-height: 0.95; letter-spacing: -5px; }
+h1 span { color: var(--purple); }
+.hero-description { max-width: 620px; font-size: 19px; color: #4f586b; }
+.hero-buttons { margin-top: 32px; display: flex; align-items: center; gap: 25px; }
+.button { display: inline-block; padding: 14px 22px; border: 0; border-radius: 8px; font-weight: bold; cursor: pointer; }
+.primary-button { background: var(--purple); color: white; }
+.text-button { font-weight: bold; border-bottom: 2px solid var(--ink); }
+
+.hero-picture { min-height: 430px; position: relative; display: grid; place-items: center; }
+.phone { width: 245px; height: 430px; padding: 30px 18px; background: var(--ink); border: 7px solid white; border-radius: 38px; box-shadow: 22px 26px 0 var(--yellow); transform: rotate(5deg); position: relative; z-index: 2; }
+.phone-speaker { width: 70px; height: 8px; margin: 0 auto; background: #555e70; border-radius: 10px; }
+.shield { width: 120px; height: 145px; margin: 65px auto 30px; display: grid; place-items: center; background: var(--green); color: var(--ink); font-size: 65px; font-weight: bold; clip-path: polygon(50% 0, 95% 18%, 88% 70%, 50% 100%, 12% 70%, 5% 18%); }
+.message { padding: 10px; background: white; border-radius: 8px; font-size: 12px; font-weight: bold; position: absolute; box-shadow: 0 8px 20px #0003; }
+.message-one { top: 72px; left: -55px; }
+.message-two { right: -75px; bottom: 60px; }
+.decoration { position: absolute; border-radius: 50%; }
+.dot-one { width: 300px; height: 300px; background: var(--blue); left: 0; top: 35px; }
+.dot-two { width: 100px; height: 100px; background: var(--green); right: 5%; bottom: 5%; }
+
+.quick-rule { padding: 22px 8%; background: var(--ink); color: white; text-align: center; }
+.quick-rule p { margin: 0; }
+.section { padding: 100px 8%; }
+.section-heading { max-width: 730px; margin-bottom: 45px; }
+h2 { margin-bottom: 18px; font-size: clamp(40px, 5vw, 68px); line-height: 1.03; letter-spacing: -3px; }
+.section-heading > p:last-child, .tool-intro > p:last-child { color: #5d6573; font-size: 18px; }
+
+/* ---------- Safety tip cards ---------- */
+.tip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.tip-card { min-height: 330px; padding: 25px; border: 2px solid var(--ink); border-radius: 14px; position: relative; }
+.tip-card h3 { font-size: 23px; line-height: 1.15; }
+.tip-card p { font-size: 15px; }
+.tip-number { font-size: 12px; font-weight: bold; }
+.tip-icon { height: 110px; display: grid; place-items: center; font-size: 48px; font-weight: bold; }
+.purple-card { background: #c7baff; }
+.green-card { background: var(--green); }
+.yellow-card { background: var(--yellow); }
+.blue-card { background: var(--blue); }
+
+/* ---------- Password checker ---------- */
+.password-section { background: white; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 8%; align-items: center; }
+.password-tool { padding: 35px; border: 2px solid var(--ink); border-radius: 14px; box-shadow: 12px 12px 0 var(--purple); }
+.password-tool label { display: block; margin-bottom: 8px; font-weight: bold; }
+.password-row { display: flex; }
+.password-row input { width: 100%; min-width: 0; padding: 14px; border: 2px solid var(--ink); border-radius: 8px 0 0 8px; }
+.password-row button { padding: 0 18px; background: var(--ink); color: white; border: 0; border-radius: 0 8px 8px 0; cursor: pointer; }
+.strength-track { height: 10px; margin-top: 20px; background: #e1e1e1; border-radius: 10px; overflow: hidden; }
+#strengthBar { width: 0; height: 100%; background: #e95555; transition: width 0.3s; }
+.strength-message { margin: 8px 0 20px; font-weight: bold; }
+.password-rules { padding-left: 22px; }
+.password-rules li { margin: 7px 0; color: #697080; }
+.password-rules li.passed { color: #24752e; font-weight: bold; }
+.privacy-note { margin: 20px 0 0; padding-top: 15px; border-top: 1px solid var(--border); font-size: 13px; }
+
+/* ---------- Quiz ---------- */
+.quiz-section { background: var(--purple); color: white; }
+.light-heading .small-title { color: var(--yellow); }
+.light-heading > p:last-child { color: #e6e0ff; }
+.quiz-box { max-width: 850px; padding: clamp(25px, 5vw, 50px); background: white; color: var(--ink); border-radius: 16px; }
+.question-count { color: var(--purple); font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+.quiz-box h3 { font-size: clamp(23px, 3vw, 34px); line-height: 1.25; }
+.answer-list { display: grid; gap: 12px; }
+.answer-button { width: 100%; padding: 15px; text-align: left; background: #f3f1f9; border: 2px solid transparent; border-radius: 8px; cursor: pointer; }
+.answer-button:hover { border-color: var(--purple); }
+.answer-button.correct { background: #d7f3d8; border-color: #2d8536; }
+.answer-button.incorrect { background: #ffe0df; border-color: #c64242; }
+.answer-button:disabled { color: var(--ink); cursor: default; }
+.quiz-feedback { min-height: 28px; margin: 18px 0; font-weight: bold; }
+.next-button { background: var(--ink); color: white; }
+.next-button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ---------- Help and footer ---------- */
+.help-section { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 8%; }
+.help-title { position: sticky; top: 40px; align-self: start; }
+.help-list { margin: 0; padding: 0; list-style: none; }
+.help-list li { padding: 24px 0; display: flex; gap: 20px; border-bottom: 1px solid var(--border); }
+.help-list li > span { width: 42px; height: 42px; flex: 0 0 42px; display: grid; place-items: center; background: var(--yellow); border-radius: 50%; font-weight: bold; }
+.help-list h3 { margin-bottom: 4px; font-size: 22px; }
+.help-list p { margin: 0; color: #5d6573; }
+.final-message { padding: 100px 8%; background: var(--green); text-align: center; }
+.final-message p:not(.small-title) { font-size: 18px; }
+.dark-button { margin-top: 15px; background: var(--ink); color: white; }
+footer { padding: 35px 6%; display: flex; justify-content: space-between; align-items: center; gap: 20px; background: var(--ink); color: white; font-size: 13px; }
+
+/* ---------- Mobile layout ---------- */
+@media (max-width: 900px) {
+  .menu-button { display: block; }
+  nav { display: none; position: absolute; top: 74px; left: 0; right: 0; padding: 25px; background: var(--cream); flex-direction: column; border-bottom: 1px solid var(--border); z-index: 10; }
+  nav.open { display: flex; }
+  .hero { grid-template-columns: 1fr; padding-top: 60px; }
+  h1 { letter-spacing: -3px; }
+  .hero-picture { min-height: 500px; }
+  .tip-grid { grid-template-columns: repeat(2, 1fr); }
+  .password-section, .help-section { grid-template-columns: 1fr; }
+  .help-title { position: static; }
+}
+
+@media (max-width: 560px) {
+  .top-bar { padding: 0 5%; }
+  .logo { font-size: 17px; }
+  .hero, .section, .final-message { padding-left: 5%; padding-right: 5%; }
+  .hero-buttons { align-items: flex-start; flex-direction: column; }
+  .phone { transform: scale(0.9) rotate(5deg); }
+  .tip-grid { grid-template-columns: 1fr; }
+  .password-tool { padding: 22px; box-shadow: 7px 7px 0 var(--purple); }
+  footer { align-items: flex-start; flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #strengthBar { transition: none; }
+}
+
