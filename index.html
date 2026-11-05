@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CyberSmart Teens teaches simple online safety, strong passwords, privacy and scam awareness.">
+  <title>CyberSmart Teens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top-bar">
+    <a class="logo" href="#home" aria-label="CyberSmart Teens home">
+      <span class="logo-icon">C</span> CyberSmart
+    </a>
+
+    <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="navigation">Menu</button>
+
+    <nav id="navigation">
+      <a href="#learn">Learn</a>
+      <a href="#password">Password check</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#help">Get help</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="small-title">Online safety for teenagers</p>
+        <h1>Think first.<br><span>Click smart.</span></h1>
+        <p class="hero-description">The internet should be fun, creative and safe. Learn a few simple habits that can protect your accounts, privacy and peace of mind.</p>
+        <div class="hero-buttons">
+          <a class="button primary-button" href="#learn">Start learning</a>
+          <a class="text-button" href="#quiz">Take the quiz â†’</a>
+        </div>
+      </div>
+
+      <div class="hero-picture" aria-label="A shield protecting a phone">
+        <div class="decoration dot-one"></div>
+        <div class="decoration dot-two"></div>
+        <div class="phone">
+          <div class="phone-speaker"></div>
+          <div class="message message-one">New message!</div>
+          <div class="shield">âœ“</div>
+          <div class="message message-two">Account protected</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-rule">
+      <p><strong>The golden rule:</strong> If a message makes you feel rushed, scared or too excited, pause before you click.</p>
+    </section>
+
+    <section class="learn-section section" id="learn">
+      <div class="section-heading">
+        <p class="small-title">Your digital toolkit</p>
+        <h2>Four habits that make a big difference</h2>
+        <p>You do not need to be a computer expert. Start with these everyday actions.</p>
+      </div>
+
+      <div class="tip-grid">
+        <article class="tip-card purple-card">
+          <span class="tip-number">01</span>
+          <div class="tip-icon">â—â—â—</div>
+          <h3>Use strong passwords</h3>
+          <p>Choose a long, different password for every account. A password manager can remember them for you.</p>
+        </article>
+
+        <article class="tip-card green-card">
+          <span class="tip-number">02</span>
+          <div class="tip-icon">2Ã—</div>
+          <h3>Turn on 2-step verification</h3>
+          <p>This adds another check when somebody tries to enter your account, even if they know your password.</p>
+        </article>
+
+        <article class="tip-card yellow-card">
+          <span class="tip-number">03</span>
+          <div class="tip-icon">?</div>
+          <h3>Question strange messages</h3>
+          <p>Check the sender and the link. Ask the person another way if a message does not sound like them.</p>
+        </article>
+
+        <article class="tip-card blue-card">
+          <span class="tip-number">04</span>
+          <div class="tip-icon">â—‰</div>
+          <h3>Protect your privacy</h3>
+          <p>Review who can see your posts. Avoid sharing your address, school timetable or live location publicly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="password-section section" id="password">
+      <div class="tool-intro">
+        <p class="small-title">Try it yourself</p>
+        <h2>Build a stronger password</h2>
+        <p>Type a made-up practice password below. Do not enter a real password that you currently use.</p>
+      </div>
+
+      <div class="password-tool">
+        <label for="passwordInput">Practice password</label>
+        <div class="password-row">
+          <input id="passwordInput" type="password" placeholder="Type a practice password" autocomplete="off">
+          <button id="showPassword" type="button" aria-label="Show practice password">Show</button>
+        </div>
+
+        <div class="strength-track" aria-hidden="true">
+          <div id="strengthBar"></div>
+        </div>
+        <p class="strength-message" id="strengthMessage" aria-live="polite">Start typing to test its strength.</p>
+
+        <ul class="password-rules">
+          <li id="lengthRule">At least 12 characters</li>
+          <li id="caseRule">Uppercase and lowercase letters</li>
+          <li id="numberRule">At least one number</li>
+          <li id="symbolRule">At least one symbol</li>
+        </ul>
+        <p class="privacy-note">ðŸ”’ This tool runs only in your browser. Nothing is saved or sent.</p>
+      </div>
+    </section>
+
+    <section class="quiz-section section" id="quiz">
+      <div class="section-heading light-heading">
+        <p class="small-title">Spot the scam</p>
+        <h2>What would you do?</h2>
+        <p>Choose the safest answer for each situation.</p>
+      </div>
+
+      <div class="quiz-box">
+        <p class="question-count" id="questionCount">Question 1 of 3</p>
+        <h3 id="questionText"></h3>
+        <div class="answer-list" id="answerList"></div>
+        <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+        <button class="button next-button" id="nextButton" type="button" disabled>Next question</button>
+      </div>
+    </section>
+
+    <section class="help-section section" id="help">
+      <div class="help-title">
+        <p class="small-title">When something goes wrong</p>
+        <h2>Pause. Save. Tell.</h2>
+      </div>
+      <ol class="help-list">
+        <li><span>1</span><div><h3>Pause</h3><p>Do not reply, pay, or send more information.</p></div></li>
+        <li><span>2</span><div><h3>Save evidence</h3><p>Take screenshots and keep usernames, dates and messages.</p></div></li>
+        <li><span>3</span><div><h3>Tell a trusted adult</h3><p>Speak to a parent, guardian, teacher or school counsellor. Asking for help is the smart move.</p></div></li>
+        <li><span>4</span><div><h3>Block and report</h3><p>Use the platform's safety tools and change affected passwords.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="final-message">
+      <p class="small-title">Remember</p>
+      <h2>You deserve to feel safe online.</h2>
+      <p>Mistakes happen. You can always stop, ask for help and take back control.</p>
+      <a class="button dark-button" href="#home">Back to the top â†‘</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo footer-logo" href="#home"><span class="logo-icon">C</span> CyberSmart</a>
+    <p>A student project about cybersecurity for teenagers.</p>
+    <p>Â© <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
